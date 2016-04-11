@@ -20,11 +20,11 @@ RUN set -x && \
 	echo G | ./makestem STEMLIST.GEN && \
 	./makeefil EWSDLIST.GEN && \
 	./makeinfl INFLECTS.LAT && \
-	mkdir /words && \
+	mkdir /usr/whitaker && \
 	mv words DICTFILE.GEN STEMFILE.GEN INDXFILE.GEN EWDSFILE.GEN \
-	    INFLECTS.SEC ADDONS.LAT UNIQUES.LAT /words && \
+	    INFLECTS.SEC ADDONS.LAT UNIQUES.LAT /usr/whitaker && \
 	cd / && \
 	rm -rf /build
 
-WORKDIR /words
-CMD ["/words/words"]
+WORKDIR /usr/whitaker
+CMD ["/usr/whitaker/words"]
